@@ -1,5 +1,4 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import { useEffect, useState } from 'react'
 import './App.css'
 import Nav from './components/Nav/Nav'
 import Header from './components/Header'
@@ -14,19 +13,31 @@ import Contact from './components/Contact'
 function App() {
   const [count, setCount] = useState(0)
 
+ useEffect(() => {
+  console.log(`window scroll ${window.scrollY}`)
+ }, [window.scrollY])
+
+ useEffect(() => {
+  const handleScroll = () => {
+    console.log('event scroll')
+  };
+  
+  addEventListener("scroll", handleScroll);
+  return () => removeEventListener("scroll", handleScroll);
+}, []);
 
   return (
-    <div onScroll={() => console.log('scroll home')} className='bg-red-500 h-[2000px] overflow-y-auto' id='home' >
-      <Nav  />
-      {/* <Header  /> */}
-      {/* <AboutUs  /> */}
-      {/* <MenuHeader  /> */}
-      {/* <Menu  /> */}
-      {/* <Images  /> */}
-      {/* <ContactHeader  /> */}
-      {/* <Contact  /> */}
-      <Footer  />
-    </div>
+      <div onScroll={() => console.log('scroll home')} className='bg-red-500 relative h-[2000px] overflow-y-scroll' id='home' >
+        <Nav  />
+        <Header  />
+        {/* <AboutUs  /> */}
+        {/* <MenuHeader  /> */}
+        {/* <Menu  /> */}
+        {/* <Images  /> */}
+        {/* <ContactHeader  /> */}
+        {/* <Contact  /> */}
+        {/* <Footer  /> */}
+      </div>
   )
 }
 
