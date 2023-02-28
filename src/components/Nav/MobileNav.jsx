@@ -11,7 +11,7 @@ const MobileNav = () => {
 
 
    
-    
+    //I know its a bit of a mess, but it works...kinda
 
   return (
     <div  className={scroll > 0 ? 'bg-black' : undefined}

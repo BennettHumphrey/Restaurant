@@ -1,3 +1,7 @@
+
+
+//Everything here has a zIndex of 50, so should be above the header with z of 50
+
 export const dropBtnStyles = {
     btn: {
         color: "white",
@@ -17,7 +21,8 @@ export const dropBtnStyles = {
         height: "5px",
         backgroundColor: "white",
         margin: "6px auto",
-        pointerEvents: "none"
+        pointerEvents: "none",
+        caretColor: "transparent",
     },
     barOne: {
         transition: "0.5s",
@@ -45,12 +50,15 @@ export const dropBtnStyles = {
         position: "absolute",
         backgroundColor: "black",
         width: "100%",
-        zIndex: "1",
+        zIndex: "50",
         textAlign: "center",
+        overflow: "hidden",
     },
     dropContentShow: {
         transform: "scaleY(1)",
         transformOrigin: "top center",
+        zIndex: "50",
+
     },
     dropItem: {
         display: "block",
@@ -58,5 +66,7 @@ export const dropBtnStyles = {
         padding: "12px 16px",
         textDecoration: "none",
         borderBottom: "1px solid grey",
+        zIndex: "50",
+
     },
 };

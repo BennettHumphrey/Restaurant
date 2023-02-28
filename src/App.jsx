@@ -11,15 +11,19 @@ import ContactHeader from './components/ContactHeader'
 import Contact from './components/Contact'
 
 function App() {
-  const [count, setCount] = useState(0)
 
  useEffect(() => {
   console.log(`window scroll ${window.scrollY}`)
- }, [window.scrollY])
+ }, [window.scrollY]);
+
+ useEffect(() => {
+  
+  document.body.scrollTop > 100 && console.log('scrollTop')
+ }, [document.body.scrollTop])
 
  useEffect(() => {
   const handleScroll = () => {
-    console.log('event scroll')
+    console.log('effect scroll')
   };
   
   addEventListener("scroll", handleScroll);
@@ -27,7 +31,36 @@ function App() {
 }, []);
 
   return (
-      <div onScroll={() => console.log('scroll home')} className='bg-red-500 relative h-[2000px] overflow-y-scroll' id='home' >
+      <div 
+      onClick={() => {
+        console.log('test click')
+      }}
+      onTouchMove={() => {
+        console.log('touchMove')
+      }}
+
+      //Found a way around using onScroll for the purposes I want, but
+      //I still want to figure out the root of the problem
+      
+      onWheel={() => {
+        console.log('onWheel')
+        console.log(`onWheel scrollTop ${document.body.scrollTop}`)
+        console.log(`onWheel scrollY ${window.scrollY}`)
+        setTimeout(() => {console.log(`onWheel scrollTop delay ${document.body.scrollTop}`)}, 500)
+      }}
+      onWheelCapture={() => {
+        console.log('onWheelCapture')
+      }}
+
+      //The offending section, onScroll never triggers
+
+      onScrollCapture={() => {
+        console.log('onScrollCapture')
+      }} 
+      onScroll={() => {
+        console.log('onScroll')
+      }} 
+      className='bg-red-500 relative h-[2000px] overflow-y-auto z-0' id='home' >
         <Nav  />
         <Header  />
         {/* <AboutUs  /> */}
