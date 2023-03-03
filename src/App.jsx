@@ -12,59 +12,34 @@ import Contact from './components/Contact'
 
 function App() {
 
- useEffect(() => {
-  console.log(`window scroll ${window.scrollY}`)
- }, [window.scrollY]);
+  const [scrolled, setScrolled] = useState(false)
 
- useEffect(() => {
-  
-  document.body.scrollTop > 100 && console.log('scrollTop')
- }, [document.body.scrollTop])
-
- useEffect(() => {
   const handleScroll = () => {
-    console.log('effect scroll')
-  };
-  
-  addEventListener("scroll", handleScroll);
-  return () => removeEventListener("scroll", handleScroll);
-}, []);
+    if (document.body.scrollTop > 90) {
+      console.log('handleScroll true')
+      return setScrolled(true);
+    }
+    console.log('handleScroll false')
+    return setScrolled(false)
+  }
 
   return (
       <div 
-      onClick={() => {
-        console.log('test click')
-      }}
       onTouchMove={() => {
-        console.log('touchMove')
+        // console.log('touchMove');
+        setTimeout(() => {handleScroll()}, 500);
       }}
 
-      //Found a way around using onScroll for the purposes I want, but
-      //I still want to figure out the root of the problem
-      
       onWheel={() => {
-        console.log('onWheel')
-        console.log(`onWheel scrollTop ${document.body.scrollTop}`)
-        console.log(`onWheel scrollY ${window.scrollY}`)
-        setTimeout(() => {console.log(`onWheel scrollTop delay ${document.body.scrollTop}`)}, 500)
-      }}
-      onWheelCapture={() => {
-        console.log('onWheelCapture')
+        // console.log('onWheel');
+        setTimeout(() => {handleScroll()}, 500)
       }}
 
-      //The offending section, onScroll never triggers
-
-      onScrollCapture={() => {
-        console.log('onScrollCapture')
-      }} 
-      onScroll={() => {
-        console.log('onScroll')
-      }} 
-      className='bg-red-500 relative h-[2000px] overflow-y-auto z-0' id='home' >
-        <Nav  />
+      className='bg-red-500 relative overflow-y-auto z-0' id='home' >
+        <Nav scrolled={scrolled} />
         <Header  />
-        {/* <AboutUs  /> */}
-        {/* <MenuHeader  /> */}
+        <AboutUs  />
+        <MenuHeader  />
         {/* <Menu  /> */}
         {/* <Images  /> */}
         {/* <ContactHeader  /> */}

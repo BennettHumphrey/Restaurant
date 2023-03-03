@@ -6,7 +6,6 @@ export const dropBtnStyles = {
     btn: {
         color: "white",
         cursor: "pointer",
-        paddingTop: "0.5rem",
         paddingBottom: "3.0rem",
         fontSize: "1.25rem",
         listStyleType: "none",

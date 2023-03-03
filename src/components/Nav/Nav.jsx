@@ -3,16 +3,18 @@ import { useWindowWidth } from '../useWindowWidth';
 import DesktopNav from './DesktopNav';
 import MobileNav from './MobileNav';
 
-const Nav = () => {
+const Nav = ({scrolled}) => {
 
     const width = useWindowWidth();
 
   return (
-    <div  className='sticky top-0 text-white bg-black flex flex-col md:flex-row w-full md:justify-between md:pr-3' >
+    <div  className={`
+    ${scrolled ? `bg-black` : `bg-transparent`}
+    fixed top-0 text-white duration-700 ease-in-out flex flex-col md:flex-row w-full md:justify-between md:pr-3 z-50`} >
         <div className='flex items-center md:w-2/5' >
             <h1 className='text-2xl px-2 pt-2 md:pt-0 bg-accent text-text-light w-screen text-center' >NUBO JAPANESE TAPAS</h1>
         </div>
-        {width > 768 ? <DesktopNav  /> : <MobileNav  />}
+        {width > 768 ? <DesktopNav /> : <MobileNav />}
     </div>
   )
 }
