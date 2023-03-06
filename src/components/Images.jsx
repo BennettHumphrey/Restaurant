@@ -1,8 +1,17 @@
 import React from 'react'
+import { images } from '../resources/data'
 
 const Images = () => {
   return (
-    <div>Images</div>
+    <div className='bg-white pb-12 ' >
+      <div className='grid grid-cols-2 gap-[6vw] px-[5vw] pb-8 bg-white' >
+        {images.map((x, i) => (
+          <img key={i} src={x} alt={`Menu image ${i+1}`}
+          className="h-full"/>
+        ))}
+      </div>
+      <div className='h-px w-4/5 bg-[#BBB] mt-10 mx-auto' />
+    </div>
   )
 }
 

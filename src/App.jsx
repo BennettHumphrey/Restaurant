@@ -40,11 +40,11 @@ function App() {
         <Header  />
         <AboutUs  />
         <MenuHeader  />
-        {/* <Menu  /> */}
-        {/* <Images  /> */}
-        {/* <ContactHeader  /> */}
-        {/* <Contact  /> */}
-        {/* <Footer  /> */}
+        <Menu  />
+        <Images  />
+        <ContactHeader  />
+        <Contact  />
+        <Footer  />
       </div>
   )
 }

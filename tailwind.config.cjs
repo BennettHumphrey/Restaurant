@@ -15,7 +15,6 @@ module.exports = {
     extend: {
       colors: {
         "text-dark": "#666666",
-        "nav": "#0D0D0D",
         "line": "#BBBBBB",
         "text-footer": "#16161D",
         "footer": "#BDBDBD"
