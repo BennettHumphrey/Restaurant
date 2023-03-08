@@ -5,7 +5,7 @@ const Contact = () => {
     <div className='bg-white pt-10 pb-8' >
       <div  className='h-px w-4/5 bg-[#BBB] mx-auto mb-10' />
       <div className='flex flex-col justify-center gap-3 px-4' >
-        <h3 className='text-7xl text-center' >HOURS</h3>
+        <h3 className='text-6xl text-center' >HOURS</h3>
         <h5 className='text-center text-2xl' >Monday-Sunday</h5>
         <h6 className='text-center text-lg' >11:30 - 3:00 PM</h6>
         <h6 className='text-center text-lg'>5:00 - 10:00 PM</h6>

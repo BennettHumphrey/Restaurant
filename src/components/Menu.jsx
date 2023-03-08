@@ -23,16 +23,18 @@ const Menu = () => {
         ))}
       </div>
       <h3 className='text-3xl text-center my-8 text-[#666]' >{selected.type}</h3>
-      {selected.dishes.map((x, i) => (
-          <div className='flex flex-col justify-center px-8 w-full py-8' key={i} >
-            <div className='flex justify-between text-xl pb-4' >
-              <h5 className='inline-block' >{x.title}</h5>
-              <h5 className='inline-block' >${x.price}</h5>
+      <div className='flex flex-col flex-wrap justify-center sm:flex-row' >
+        {selected.dishes.map((x, i) => (
+            <div className='flex flex-col justify-center px-8 w-full sm:basis-1/2 md:basis-1/3 py-8' key={i} >
+              <div className='flex justify-between text-xl pb-4' >
+                <h5 className='inline-block' >{x.title}</h5>
+                <h5 className='inline-block' >${x.price}</h5>
+              </div>
+              <p>{x.desc}</p>
             </div>
-            <p>{x.desc}</p>
-          </div>
-        ))
-      }
+          ))
+        }
+      </div>
       <div className='h-px w-4/5 bg-[#BBB] my-14 mx-auto' />
     </div>
   )

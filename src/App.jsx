@@ -9,13 +9,14 @@ import Images from './components/Images'
 import Footer from './components/Footer'
 import ContactHeader from './components/ContactHeader'
 import Contact from './components/Contact'
+import { ParallaxProvider } from 'react-scroll-parallax'
 
 function App() {
 
   const [scrolled, setScrolled] = useState(false)
 
   const handleScroll = () => {
-    if (document.body.scrollTop > 90) {
+    if (window.scrollY > 90) {
       console.log('handleScroll true')
       return setScrolled(true);
     }
@@ -24,28 +25,28 @@ function App() {
   }
 
   return (
-      <div 
-      onTouchMove={() => {
-        // console.log('touchMove');
-        setTimeout(() => {handleScroll()}, 500);
-      }}
-
-      onWheel={() => {
-        // console.log('onWheel');
-        setTimeout(() => {handleScroll()}, 500)
-      }}
-
-      className='bg-red-500 relative overflow-y-auto z-0' id='home' >
-        <Nav scrolled={scrolled} />
-        <Header  />
-        <AboutUs  />
-        <MenuHeader  />
-        <Menu  />
-        <Images  />
-        <ContactHeader  />
-        <Contact  />
-        <Footer  />
-      </div>
+      <ParallaxProvider>
+        <div
+        onTouchMove={() => {
+          // console.log('touchMove');
+          setTimeout(() => {handleScroll()}, 500);
+        }}
+        onWheel={() => {
+          // console.log('onWheel');
+          setTimeout(() => {handleScroll()}, 500)
+        }}
+        className='white relative overflow-hidden z-0' id='home' >
+          <Nav scrolled={scrolled} />
+          <Header  />
+          <AboutUs  />
+          <MenuHeader  />
+          <Menu  />
+          <Images  />
+          <ContactHeader  />
+          <Contact  />
+          <Footer  />
+        </div>
+      </ParallaxProvider>
   )
 }
 
