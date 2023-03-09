@@ -23,27 +23,27 @@ export const menu = [
             {
                 title: "Y.M.C.A. ROLL",
                 price: 12,
-                desc: "yam, mango, cucumber, avocado",
+                desc: "Yam, mango, cucumber, avocado",
             },
             {
                 title: "TUNA MAKI",
                 price: 7,
-                desc: "tuna / 6pc",
+                desc: "Tuna / 6pc",
             },
             {
                 title: "SALMON MAKI",
                 price: 8,
-                desc: "salmon / 6pc",
+                desc: "Salmon / 6pc",
             },
             {
                 title: "CALIFORNIA ROLL",
                 price: 7,
-                desc: "imitation crab meat, avocado",
+                desc: "Imitation crab meat, avocado",
             },
             {
                 title: "DYNAMITE ROLL",
                 price: 8.5,
-                desc: "prawn tempura, imitation crab meat, cucumber, avocado, fish eggs / 6pc",
+                desc: "Prawn tempura, imitation crab meat, cucumber, avocado, fish eggs / 6pc",
             },
         ],
     },

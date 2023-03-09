@@ -6,7 +6,7 @@ const MenuHeader = () => {
   const { ref } = useParallax({ translateY: [-22, 20] });
 
   return (
-    <div className='h-[40vh]' >
+    <div id='menu' className='h-[40vh]' >
       <div ref={ref} className='bg-[url(/imgs/menu1.jpg)] z-[-10] bg-cover 
       bg-center absolute left-0 right-0 w-full h-[65vh] sm:h-[80vh]' />
       <div className='bg-[#0D0D0D50] flex flex-col h-full w-full items-center justify-center'>

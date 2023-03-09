@@ -13,7 +13,7 @@ export const dropBtnStyles = {
         width: "100%",
         height: "48px",
         top: "-1px",
-        zIndex: "50",
+        zIndex: "100",
     },
     bars: {
         width: "35px",
@@ -49,15 +49,14 @@ export const dropBtnStyles = {
         position: "absolute",
         backgroundColor: "black",
         width: "100%",
-        zIndex: "50",
+        zIndex: "100",
         textAlign: "center",
         overflow: "hidden",
     },
     dropContentShow: {
         transform: "scaleY(1)",
         transformOrigin: "top center",
-        zIndex: "50",
-
+        zIndex: "100",
     },
     dropItem: {
         display: "block",
@@ -65,7 +64,6 @@ export const dropBtnStyles = {
         padding: "12px 16px",
         textDecoration: "none",
         borderBottom: "1px solid grey",
-        zIndex: "50",
-
+        zIndex: "100",
     },
 };

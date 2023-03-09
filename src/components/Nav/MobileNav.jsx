@@ -10,7 +10,7 @@ const MobileNav = () => {
     //I know its a bit of a mess, but it works...kinda
 
   return (
-    <div onClick={() => setDropdownActive(!dropdownActive)} style={{...dropBtnStyles.btn}} >
+    <div className='z-[100]' onClick={() => setDropdownActive(!dropdownActive)} style={{...dropBtnStyles.btn}} >
       <div style={dropdownActive ? {...dropBtnStyles.barOne, ...dropBtnStyles.bars, ...dropBtnStyles.barOneX} : {...dropBtnStyles.barOne, ...dropBtnStyles.bars}} />
       <div style={dropdownActive ? {...dropBtnStyles.barTwo, ...dropBtnStyles.bars, ...dropBtnStyles.barTwoX} : {...dropBtnStyles.barTwo, ...dropBtnStyles.bars}} />
       <div style={dropdownActive ? {...dropBtnStyles.barThree, ...dropBtnStyles.bars, ...dropBtnStyles.barThreeX} : {...dropBtnStyles.barThree, ...dropBtnStyles.bars}}/>

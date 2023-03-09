@@ -16,7 +16,7 @@ const Footer = () => {
           <h4 className='text-2xl py-4' >LOCATION</h4>
           <p className='text-lg' >739 Pandora Avenue</p>
           <p className='text-lg' >Victoria BC</p>
-          <p className='text-lg' >V8W1N9</p>
+          <p className='text-lg' >V8W-1N9</p>
         </div>
         <div className='flex flex-col gap-2 pb-8' >
           <h4 className='text-xl pb-4' >HOURS</h4>

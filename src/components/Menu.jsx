@@ -18,7 +18,7 @@ const Menu = () => {
           onPress={() => setSelected(x)}
           onClick={() => setSelected(x)}
           key={i} >
-            <h5 className={`text-lg font-[600] duration-500 ${x.type === selected.type && `underline`}`} >{x.type}</h5>
+            <h5 className={`text-lg hover:cursor-pointer font-[600] duration-500 ${x.type === selected.type && `underline`}`} >{x.type}</h5>
           </div>
         ))}
       </div>
