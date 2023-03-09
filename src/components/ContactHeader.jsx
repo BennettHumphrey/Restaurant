@@ -7,7 +7,7 @@ const ContactHeader = () => {
 
   return (
     <div className='h-[30vh]' >
-      <div ref={ref} className='bg-[url(./resources/imgs/main3.jpg)] z-[-10] bg-cover 
+      <div ref={ref} className='bg-[url(/imgs/main3.jpg)] z-[-10] bg-cover 
       bg-center absolute left-0 right-0 w-full h-[55vh] sm:h-[60vh]' />
       <div className='bg-[#0D0D0D50] flex flex-col h-full w-full items-center justify-center'>
         <h2 className='text-white text-center text-6xl mb-4 mx-2' >CONTACT</h2>

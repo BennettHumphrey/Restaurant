@@ -140,14 +140,14 @@ export const menu = [
 ]
 
 export const images = [
-    "./src/resources/imgs/food1.jpg",
-    "./src/resources/imgs/food2.jpg",
-    "./src/resources/imgs/food3.jpg",
-    "./src/resources/imgs/food4.jpg",
-    "./src/resources/imgs/food5.jpg",
-    "./src/resources/imgs/food6.jpg",
-    "./src/resources/imgs/food7.jpg",
-    "./src/resources/imgs/food8.jpeg",
+    "./imgs/food1.jpg",
+    "./imgs/food2.jpg",
+    "./imgs/food3.jpg",
+    "./imgs/food4.jpg",
+    "./imgs/food5.jpg",
+    "./imgs/food6.jpg",
+    "./imgs/food7.jpg",
+    "./imgs/food8.jpeg",
 ]
 
 
