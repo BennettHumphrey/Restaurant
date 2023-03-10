@@ -3,7 +3,7 @@ import { navOptions } from '../../resources/data'
 import { dropBtnStyles } from './NavStyles'
 
 
-const MobileNav = () => {
+const MobileNav = ({setScrolled}) => {
 
     const [dropdownActive, setDropdownActive] = useState(false);
 
@@ -16,7 +16,7 @@ const MobileNav = () => {
       <div style={dropdownActive ? {...dropBtnStyles.barThree, ...dropBtnStyles.bars, ...dropBtnStyles.barThreeX} : {...dropBtnStyles.barThree, ...dropBtnStyles.bars}}/>
       <div style={dropdownActive ? {...dropBtnStyles.dropContent, ...dropBtnStyles.dropContentShow} : {...dropBtnStyles.dropContent}} >
       {navOptions.map((o, i) => (
-                  <a key={i} style={dropBtnStyles.dropItem} href={o.href}>{o.title}</a>
+                  <a key={i} style={dropBtnStyles.dropItem} onClick={() => setScrolled(true)} onTouchEnd={() => setScrolled(true)} href={o.href}>{o.title}</a>
           ))}
       </div>
     </div>

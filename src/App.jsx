@@ -36,7 +36,7 @@ function App() {
           setTimeout(() => {handleScroll()}, 500)
         }}
         className='white relative overflow-hidden z-0' id='home' >
-          <Nav scrolled={scrolled} />
+          <Nav scrolled={scrolled} setScrolled={setScrolled} />
           <Header  />
           <AboutUs  />
           <MenuHeader  />

@@ -3,7 +3,7 @@ import { useWindowWidth } from '../useWindowWidth';
 import DesktopNav from './DesktopNav';
 import MobileNav from './MobileNav';
 
-const Nav = ({scrolled}) => {
+const Nav = ({scrolled, setScrolled}) => {
 
     const width = useWindowWidth();
 
@@ -14,7 +14,7 @@ const Nav = ({scrolled}) => {
         <div className='flex items-center md:w-2/5' >
             <h1 className='text-2xl px-2 pt-2 md:pt-0 bg-accent text-text-light w-screen text-center' >NUBO JAPANESE TAPAS</h1>
         </div>
-        {width > 768 ? <DesktopNav /> : <MobileNav />}
+        {width > 768 ? <DesktopNav setScrolled={setScrolled} /> : <MobileNav setScrolled={setScrolled} />}
     </div>
   )
 }
