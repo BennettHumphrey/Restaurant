@@ -28,11 +28,9 @@ function App() {
       <ParallaxProvider>
         <div
         onTouchMove={() => {
-          // console.log('touchMove');
           setTimeout(() => {handleScroll()}, 500);
         }}
         onWheel={() => {
-          // console.log('onWheel');
           setTimeout(() => {handleScroll()}, 500)
         }}
         className='white relative overflow-hidden z-0' id='home' >

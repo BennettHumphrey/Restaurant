@@ -1,2 +1,0 @@
--Menu items get flashing line
--When using nav, parallax is strange (onClick scrolled(true))
