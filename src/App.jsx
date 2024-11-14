@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import './App.css'
 import Nav from './components/Nav/Nav'
 import Header from './components/Header'
@@ -17,10 +17,10 @@ function App() {
 
   const handleScroll = () => {
     if (window.scrollY > 90) {
-      console.log('handleScroll true')
+      // console.log('handleScroll true')
       return setScrolled(true);
     }
-    console.log('handleScroll false')
+    // console.log('handleScroll false')
     return setScrolled(false)
   }
 
@@ -47,5 +47,6 @@ function App() {
       </ParallaxProvider>
   )
 }
+
 
 export default App

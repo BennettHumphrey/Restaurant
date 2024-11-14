@@ -15,10 +15,11 @@ const Menu = () => {
       <div className='flex justify-around mx-6'>
         {menu.map((x, i) => (
           <div 
-          onPress={() => setSelected(x)}
           onClick={() => setSelected(x)}
-          key={i} >
+          key={i}
+          className='flex flex-col items-center group' >
             <h5 className={`text-lg hover:cursor-pointer select-none font-[600] duration-500 ${x.type === selected.type && `underline`}`} >{x.type}</h5>
+            <div className='h-[2px] w-0 duration-500 group-hover:w-full bg-black relative -top-[7px]' />
           </div>
         ))}
       </div>
